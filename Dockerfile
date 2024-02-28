@@ -6,4 +6,4 @@ COPY . /app
 RUN poetry export -f requirements.txt --output requirements.txt --without-hashes
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 RUN python install_dep.py
-CMD ["streamlit", "run", "--server.port=8080", "sentiment-analysis-text.py"]
+CMD ["streamlit", "run", "--server.port=8000", "sentiment-analysis-text.py"]
